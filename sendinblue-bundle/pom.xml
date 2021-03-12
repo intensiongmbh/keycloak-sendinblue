@@ -7,6 +7,8 @@
   </parent>
   <artifactId>keycloak-sendinblue-bundle</artifactId>
   <packaging>ear</packaging>
+  
+  <description>Create an EAR to deploy the extension and its dependencies in Keycloak</description>
 
   <dependencies>
     <dependency>
@@ -20,7 +22,7 @@
     <plugins>
       <plugin>
         <artifactId>maven-ear-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.2.0</version>
         <configuration>
           <includeLibInApplicationXml>true</includeLibInApplicationXml>
         </configuration>
