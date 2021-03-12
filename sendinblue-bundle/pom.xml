@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>de.intension</groupId>
+    <artifactId>keycloak-sendinblue</artifactId>
+    <version>${keycloak.version}${changelist}</version>
+  </parent>
+  <artifactId>keycloak-sendinblue-bundle</artifactId>
+  <packaging>ear</packaging>
+  
+  <description>Create an EAR to deploy the extension and its dependencies in Keycloak</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>de.intension</groupId>
+      <artifactId>keycloak-sendinblue-extension</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <includeLibInApplicationXml>true</includeLibInApplicationXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

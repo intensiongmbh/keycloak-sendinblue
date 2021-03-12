@@ -2,7 +2,7 @@ version: '3.7'
 services:
   keycloak:
     container_name: keycloak-sendinblue
-    image: jboss/keycloak:{{ KEYCLOAK_VERSION }}
+    image: "jboss/keycloak:${KEYCLOAK_VERSION}"
     ports:
     - 18080:8080
     environment:
@@ -10,4 +10,4 @@ services:
       KEYCLOAK_PASSWORD: keycloak
     volumes:
     - /etc/localtime:/etc/localtime:ro
-    - ./target/keycloak-sendinblue-{{ KEYCLOAK_VERSION }}.jar:/opt/jboss/keycloak/standalone/deployments/keycloak-sendinblue.jar
+    - "./sendinblue-bundle/target/keycloak-sendinblue-bundle-${KEYCLOAK_VERSION}.ear:/opt/jboss/keycloak/standalone/deployments/keycloak-sendinblue.ear"
