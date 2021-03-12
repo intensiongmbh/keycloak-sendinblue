@@ -6,6 +6,8 @@
       <module name="org.keycloak.keycloak-server-spi" />
       <module name="org.keycloak.keycloak-server-spi-private" />
       <module name="org.keycloak.keycloak-services" />
+      <module name="org.jboss.logging" />
+      <module name="com.sendinblue.sib-api-v3-sdk" />
     </dependencies>
   </deployment>
 </jboss-deployment-structure>
