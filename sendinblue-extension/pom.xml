@@ -14,6 +14,15 @@
 
   <name>Keycloak Sendinblue Extension</name>
 
+  <properties>
+    <jar.name>${artifactId}-${keycloak.version}${changelist}</jar.name>
+  </properties>
+
+  <build>
+    <!-- Override this with -Djar.name when building the jar -->
+    <finalName>${jar.name}</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>org.keycloak</groupId>
