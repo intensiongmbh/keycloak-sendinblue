@@ -1,2 +1,2 @@
 FROM busybox
-COPY sendinblue-extension/target/sendinblue.jar /sendinblue/
+COPY ../../sendinblue-bundle/target/sendinblue.ear /sendinblue/
