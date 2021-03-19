@@ -32,4 +32,4 @@ jobs:
         with:
           push: true
           file: .github/workflows/Dockerfile
-          tags: intension/sendinblue-email-provider:latest,intension/sendinblue-email-provider:${GITHUB_REF##*/}
+          tags: intension/sendinblue-email-provider:latest
