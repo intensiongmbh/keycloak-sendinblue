@@ -35,6 +35,7 @@ jobs:
 
           VERSION=${GITHUB_REF##*/}
 
+          docker tag $IMAGE_NAME $IMAGE_ID:latest
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           
           docker push $IMAGE_ID:latest
