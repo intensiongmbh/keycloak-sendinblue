@@ -10,7 +10,7 @@
 
   <name>Keycloak Sendinblue</name>
   <description>Keycloak addon to use the Sendinblue API for sending mails</description>
-  
+
   <url>https://github.com/intensiongmbh/keycloak-sendinblue</url>
 
   <licenses>
@@ -22,6 +22,18 @@
   </licenses>
 
   <developers>
+    <developer>
+      <name>Romain Grosjean</name>
+      <email>rgrosjean@intension.de</email>
+      <organization>intension GmbH</organization>
+      <organizationUrl>https://www.intension.de/</organizationUrl>
+    </developer>
+    <developer>
+      <name>Lokeshkumar Prakashkumar</name>
+      <email>lprakash@intension.de</email>
+      <organization>intension GmbH</organization>
+      <organizationUrl>https://www.intension.de/</organizationUrl>
+    </developer>
     <developer>
       <name>Ingo Kuba</name>
       <email>ikuba@intension.de</email>
