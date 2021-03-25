@@ -1,3 +1,4 @@
+[![Release](https://github.com/intensiongmbh/keycloak-sendinblue/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/intensiongmbh/keycloak-sendinblue/actions/workflows/maven-publish.yml)
 [![Docker](https://github.com/intensiongmbh/keycloak-sendinblue/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/intensiongmbh/keycloak-sendinblue/actions/workflows/docker-publish.yml)
 
 # Keycloak Sendinblue
