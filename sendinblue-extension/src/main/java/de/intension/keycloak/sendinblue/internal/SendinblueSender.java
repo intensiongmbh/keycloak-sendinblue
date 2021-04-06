@@ -36,6 +36,9 @@ public class SendinblueSender
      * @param user recipient of the email
      * @param templateId ID of the template to use for the mail
      * @param params paramter to be replaced in the mail template
+     * @throws EmailException with message from Sendinblue's {@link ApiException} (for example:
+     *             'Unauthorized' when API key is invalid or
+     *             'Not Found' when template couldn't be found.
      */
     public void postToSendinblue(UserModel user, long templateId, Map<String, String> params)
         throws EmailException
@@ -48,10 +51,11 @@ public class SendinblueSender
             .to(Arrays.asList(recipient));
 
         try {
+            apiInstance.getSmtpTemplate(templateId);
             apiInstance.sendTransacEmail(sendSmtpEmail);
         } catch (ApiException e) {
             LOGGER.errorf("[%s] Unable to send transactional mail for user '%s'", LogId.KCSIB0002, user.getEmail());
-            throw new EmailException("Failed to send mail with Sendinblue", e);
+            throw new EmailException(e.getMessage(), e);
         }
     }
 

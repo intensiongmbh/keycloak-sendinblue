@@ -1,0 +1,5 @@
+embed-server --server-config=standalone-ha.xml --std-out=echo
+/subsystem=keycloak-server/spi=emailSender/:add
+/subsystem=keycloak-server/spi=emailSender/provider=sendinblue-email-provider/:add(enabled=true,properties={api-key => "${env.SENDINBLUE_API_KEY}"})
+:reload
+stop-embedded-server
