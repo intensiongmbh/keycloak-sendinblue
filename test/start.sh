@@ -9,4 +9,4 @@ fi
 KEYCLOAK_VERSION=$(mvn help:evaluate -Dexpression=keycloak.version -q -DforceStdout)
 
 # start docker
-KEYCLOAK_VERSION=$KEYCLOAK_VERSION docker-compose up --build --detach
+KEYCLOAK_VERSION="$KEYCLOAK_VERSION-legacy" docker-compose up --build --detach
