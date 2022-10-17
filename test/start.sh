@@ -1,6 +1,6 @@
 #!/bin/bash
 # build extension without SNAPSHOT suffix
-mvn clean package -DskipTests -DprojectVersion=docker -Dchangelist=
+mvn clean package -DskipTests -DprojectVersion=legacy -Dchangelist=
 if [[ "$?" -ne 0 ]] ; then
   echo 'could not run maven package'; exit $rc
 fi
