@@ -12,4 +12,4 @@ services:
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ./test/email-provider.cli:/opt/jboss/startup-scripts/email-provider.cli
-    - "./sendinblue-bundle/target/keycloak-sendinblue-bundle-KC-${KEYCLOAK_VERSION}-docker.ear:/opt/jboss/keycloak/standalone/deployments/keycloak-sendinblue.ear"
+    - ./target/keycloak-sendinblue-extension-KC-${KEYCLOAK_VERSION}.jar:/opt/jboss/keycloak/standalone/deployments/keycloak-sendinblue.jar
